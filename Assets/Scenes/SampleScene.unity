@@ -3827,6 +3827,18 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: f576ec86c73ad424eaecddae0a031c2f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 5a85a403f4ea8d14784c97e5820f0949, type: 3}
+    volume: 1
+    pitch: 1.109
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1326026522
 Transform:
   m_ObjectHideFlags: 0
@@ -4215,7 +4227,7 @@ MonoBehaviour:
   jumpDelay: 0.1
   jumpCount: 2
   jumpEffectPrefab: {fileID: 0}
-  jumpSound: 
+  jumpSound: Jump
 --- !u!114 &1634825338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4250,7 +4262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d971d61a9bbe647a041096ce2e72c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathSound: 
+  deathSound: Death
 --- !u!1 &1841743449
 GameObject:
   m_ObjectHideFlags: 0
