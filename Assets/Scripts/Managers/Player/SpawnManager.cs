@@ -5,12 +5,13 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     private Vector3 spawnPoint = new Vector3();
-    public string deathSound;
+    public Transform startingSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        spawnPoint = startingSpawn.position;
+        Respawn();
     }
 
     // Update is called once per frame
@@ -27,7 +28,6 @@ public class SpawnManager : MonoBehaviour
 
     public void Respawn()
     {
-        FindObjectOfType<AudioManager>().PlaySound(deathSound);
         gameObject.transform.position = spawnPoint;
     }
 }

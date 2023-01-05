@@ -5,6 +5,7 @@ using UnityEngine;
 public class DeathBox : MonoBehaviour
 {
     private SpawnManager spawnManager;
+    public string deathSound;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class DeathBox : MonoBehaviour
         if (collision.tag == "Player")
         {
             // Debug.Log("You have died!");
+            FindObjectOfType<AudioManager>().PlaySound(deathSound);
             spawnManager.Respawn();
         }
     }
