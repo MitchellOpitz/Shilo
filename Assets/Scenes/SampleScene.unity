@@ -5831,7 +5831,7 @@ MonoBehaviour:
   disabledScripts: []
   jumpSpeed: 15
   jumpDelay: 0.1
-  jumpCount: 2
+  jumpCount: 1
   jumpEffectPrefab: {fileID: 0}
   jumpSound: Jump
 --- !u!114 &1634825338
