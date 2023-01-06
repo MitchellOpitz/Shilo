@@ -6,6 +6,7 @@ public enum Buttons
     Left,
     Up,
     Down,
-    A,
-    B
+    Jump,
+    Dash,
+    Run
 }

@@ -5122,6 +5122,7 @@ GameObject:
   - component: {fileID: 1634825337}
   - component: {fileID: 1634825338}
   - component: {fileID: 1634825339}
+  - component: {fileID: 1634825340}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5283,7 +5284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8c773273704b1459520f5d74bb749b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputButtons: 000000000100000004000000
+  inputButtons: 000000000100000006000000
   disabledScripts: []
   speed: 10
   runMultiplier: 2
@@ -5300,9 +5301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130831229166d044fa64c4167e52aa8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputButtons: 05000000
+  inputButtons: 04000000
   disabledScripts: []
-  jumpSpeed: 20
+  jumpSpeed: 15
   jumpDelay: 0.1
   jumpCount: 2
   jumpEffectPrefab: {fileID: 0}
@@ -5324,10 +5325,10 @@ MonoBehaviour:
     m_Bits: 8
   isStanding: 0
   onWall: 0
-  bottomPosition: {x: 0, y: 0}
-  rightPosition: {x: 0, y: 0}
-  leftPosition: {x: 0, y: 0}
-  collisionRadius: 10
+  bottomPosition: {x: 0, y: -0.26}
+  rightPosition: {x: 0.26, y: 0}
+  leftPosition: {x: -0.26, y: 0}
+  collisionRadius: 0.25
   debugCollisionColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1634825339
 MonoBehaviour:
@@ -5342,6 +5343,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingSpawn: {fileID: 1841743450}
+--- !u!114 &1634825340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634825329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecf6f9f08fe9d8419fe0bd7a0482f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButtons: 0200000003000000010000000000000005000000
+  disabledScripts: []
+  dashSpeed: 10
 --- !u!1 &1841743449
 GameObject:
   m_ObjectHideFlags: 0
@@ -8245,21 +8261,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputs:
-  - axisName: Horizontal
+  - axisName: Vertical
     offValue: 0
-    button: 0
+    button: 2
     condition: 0
+  - axisName: Vertical
+    offValue: 0
+    button: 3
+    condition: 1
   - axisName: Horizontal
     offValue: 0
     button: 1
     condition: 1
-  - axisName: Fire1
+  - axisName: Horizontal
     offValue: 0
-    button: 4
+    button: 0
     condition: 0
   - axisName: Jump
     offValue: 0
     button: 5
+    condition: 0
+  - axisName: Fire1
+    offValue: 0
+    button: 4
     condition: 0
   inputState: {fileID: 1634825334}
 --- !u!4 &1977033534
