@@ -32,6 +32,10 @@ public class Walk : AbstractBehavior
                 isRunning = true;
             }
             var velX = tempSpeed * (float)inputState.direction;
+            if (collisionState.onWall)
+            {
+                velX = 0;
+            }
             rb.velocity = new Vector2(velX, rb.velocity.y);
         }
     }

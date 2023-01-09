@@ -15,16 +15,14 @@ public class FrictionUpdate : AbstractBehavior
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (collisionState.isStanding)
+        if (collisionState.onWall)
         {
-            Debug.Log("standing");
-            material.friction = friction;
-        } else
-        {
-            Debug.Log("Jumping");
             material.friction = 0f;
+        } else if (collisionState.isStanding)
+        {
+            material.friction = friction;
         }
     }
 }
