@@ -6909,7 +6909,7 @@ Tilemap:
       - {fileID: -4038681163649527976, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 4187205045258476474, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: -8170234363652224056, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 46, y: -5, z: 0}
@@ -8002,10 +8002,10 @@ MonoBehaviour:
     m_Bits: 8
   isStanding: 0
   onWall: 0
-  bottomPosition: {x: 0, y: -0.26}
-  rightPosition: {x: 0.26, y: -0.25}
-  leftPosition: {x: -0.26, y: 0}
-  collisionRadius: 0.25
+  bottomPosition: {x: 0, y: -0.01}
+  rightPosition: {x: 0.03, y: 0}
+  leftPosition: {x: -0.03, y: 0}
+  collisionRadius: 0
   debugCollisionColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1634825339
 MonoBehaviour:

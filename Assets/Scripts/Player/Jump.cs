@@ -12,10 +12,12 @@ public class Jump : AbstractBehavior
 
     protected float lastJumpTime = 0;
     protected int jumpsRemaining = 0;
+    private bool isJumping;
 
     // Start is called before the first frame update
     void Start()
     {
+        isJumping = false;
         
     }
 
@@ -27,6 +29,7 @@ public class Jump : AbstractBehavior
 
         if (collisionState.isStanding)
         {
+            isJumping = false;
             if (canJump && holdTime < .1f)
             {
                 jumpsRemaining = jumpCount - 1;
@@ -57,10 +60,16 @@ public class Jump : AbstractBehavior
         lastJumpTime = Time.time;
         rb.velocity = new Vector2(vel.x, jumpSpeed);
         FindObjectOfType<AudioManager>().PlaySound(jumpSound);
+        isJumping = true;
     }
 
     public float GetLastJumpTime()
     {
         return lastJumpTime;
+    }
+
+    public bool GetJumping()
+    {
+        return isJumping;
     }
 }
