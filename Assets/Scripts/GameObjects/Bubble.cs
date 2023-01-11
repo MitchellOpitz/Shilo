@@ -10,10 +10,12 @@ public class Bubble : MonoBehaviour
     Vector2 moveDirection;
     public Rigidbody2D rb;
     Directions direction;
+    private SpriteRenderer bubble;
 
     // Start is called before the first frame update
     void Start()
     {
+        bubble = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -42,5 +44,10 @@ public class Bubble : MonoBehaviour
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
+    }
+
+    public void ToggleBubble(bool tF)
+    {
+        bubble.enabled = tF;
     }
 }

@@ -15,6 +15,8 @@ public class Dash : AbstractBehavior
     private float xDirection = 0f;
     private float yDirection = 0f;
 
+    public Bubble bubble;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class Dash : AbstractBehavior
             // Debug.Log("Dashed | x velocity: " + (xDirection * dashSpeed) + ", y velocity" + (yDirection * dashSpeed));
             player.velocity = new Vector2(xDirection * dashSpeed, yDirection * dashSpeed);
             canDash = false;
+            bubble.ToggleBubble(false);
             startDashTime = Time.time;
             ToggleScripts(canDash);
             FindObjectOfType<AudioManager>().PlaySound(dashSound);
@@ -48,6 +51,7 @@ public class Dash : AbstractBehavior
     void ResetDash()
     {
         canDash = true;
+        bubble.ToggleBubble(true);
         ToggleScripts(canDash);
     }
 

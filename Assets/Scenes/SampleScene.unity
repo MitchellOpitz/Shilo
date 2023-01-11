@@ -7403,7 +7403,7 @@ Tilemap:
       - {fileID: -4038681163649527976, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 4187205045258476474, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: -8170234363652224056, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 46, y: -5, z: 0}
@@ -7433,7 +7433,7 @@ Tilemap:
       - {fileID: 6675010921487994408, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 8635107249075741407, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 6917375025882815080, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 46, y: -2, z: 0}
@@ -7453,7 +7453,7 @@ Tilemap:
       - {fileID: 7568011105004788439, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 1006883245280364660, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 4150494393815715536, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 46, y: 0, z: 0}
@@ -7533,7 +7533,7 @@ Tilemap:
       - {fileID: 7568011105004788439, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 1006883245280364660, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 4150494393815715536, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 38, y: 11, z: 0}
@@ -7543,7 +7543,7 @@ Tilemap:
       - {fileID: 7568011105004788439, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 1006883245280364660, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
       - {fileID: 4150494393815715536, guid: 48a5c581c4335c844abe92ebcf9c4a29, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -8533,6 +8533,7 @@ MonoBehaviour:
   dashSpeed: 15
   dashDelay: 0
   dashSound: Dash
+  bubble: {fileID: 1958959971}
 --- !u!114 &1634825341
 MonoBehaviour:
   m_ObjectHideFlags: 0
