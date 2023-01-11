@@ -48,7 +48,7 @@ public class Dash : AbstractBehavior
         }
     }
 
-    void ResetDash()
+    public void ResetDash()
     {
         canDash = true;
         bubble.ToggleBubble(true);

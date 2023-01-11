@@ -6,11 +6,13 @@ public class WaterInteraction : MonoBehaviour
 {
     public Rigidbody2D rb;
     private float gravity;
+    private Dash dash;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        dash = GetComponent<Dash>();
         gravity = rb.gravityScale;
     }
 
@@ -25,6 +27,7 @@ public class WaterInteraction : MonoBehaviour
         if (collision.tag == "Water")
         {
             rb.gravityScale = gravity / 2;
+            dash.ResetDash();
         }
     }
 
