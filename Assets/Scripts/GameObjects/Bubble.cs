@@ -12,6 +12,11 @@ public class Bubble : MonoBehaviour
     Directions direction;
     private SpriteRenderer bubble;
 
+    public Sprite bubbleWhole;
+    public Sprite bubblePop;
+
+    public float timeDelay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +53,28 @@ public class Bubble : MonoBehaviour
 
     public void ToggleBubble(bool tF)
     {
+
+        if (tF)
+        {
+            StartCoroutine(BubbleSpawn(tF));
+        } else
+        {
+            StartCoroutine(BubblePop(tF));
+        }
+    }
+
+    IEnumerator BubbleSpawn(bool tF)
+    {
+        bubble.enabled = tF;
+        yield return new WaitForSeconds(timeDelay);
+        bubble.sprite = bubbleWhole;
+
+    }
+
+    IEnumerator BubblePop(bool tF)
+    {
+        bubble.sprite = bubblePop;
+        yield return new WaitForSeconds(timeDelay);
         bubble.enabled = tF;
     }
 }
