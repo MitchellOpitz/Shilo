@@ -23,5 +23,6 @@ public class SpawnPoint : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         spawnManager.SetSpawnPoint(spawnPoint.bounds.center);
+        PlayerPrefs.SetString("spawnPoint", this.name);
     }
 }

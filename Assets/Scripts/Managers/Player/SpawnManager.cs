@@ -10,7 +10,16 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPoint = startingSpawn.position;
+        string spawnName;
+
+        if (PlayerPrefs.HasKey("spawnPoint"))
+        {
+            spawnName = PlayerPrefs.GetString("spawnPoint");
+        } else
+        {
+            spawnName = "Room1-Left";
+        }
+        spawnPoint = GameObject.Find(spawnName).transform.position;
         Respawn();
     }
 
